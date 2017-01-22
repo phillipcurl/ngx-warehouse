@@ -47,6 +47,7 @@
     "@types/chai": "^3.4.30",
     "@types/core-js": "^0.9.32",
     "@types/jasmine": "^2.2.33",
+    "@types/localforage": "0.0.32",
     "@types/sinon": "^1.16.27",
     "@types/sinon-chai": "^2.7.26",
     "awesome-typescript-loader": "^2.2.4",
@@ -93,5 +94,8 @@
     "commitizen": {
       "path": "node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "localforage": "^1.4.3"
   }
 }

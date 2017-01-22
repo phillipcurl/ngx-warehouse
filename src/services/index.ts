@@ -1,0 +1,1 @@
+export { LocalForageService } from './localForage.service';

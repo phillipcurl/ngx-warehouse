@@ -1,0 +1,1 @@
+export { LocalForageItem } from './localForageItem';

@@ -1,0 +1,1 @@
+export { LocalForageToken } from './localForage.token';
