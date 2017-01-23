@@ -2,32 +2,44 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import * as localforage from 'localforage';
 
-import { LocalForageService } from './services';
+import { IStorageConfig, StorageConfig } from './models';
+
+import { LocalForageService, Storage } from './services';
 import { LocalForageToken } from './tokens';
 
-import { HelloWorldComponent } from './helloWorld.component';
-
 export function localforageFactory(): any {
-    return localforage;
+  return localforage;
+}
+
+export function provideStorage(storageConfig: StorageConfig): any {
+  return {
+    provide: Storage,
+    useFactory: () => new Storage(localforageFactory(), storageConfig)
+  };
 }
 
 @NgModule({
-  declarations: [
-    HelloWorldComponent
-  ],
   imports: [CommonModule],
-  exports: [HelloWorldComponent]
+  providers: [
+    {
+      provide: LocalForageToken,
+      useFactory: localforageFactory
+    },
+    Storage
+  ]
 })
 export class NgxStorageModule {
 
-  static forRoot(): ModuleWithProviders {
+  static forRoot(storageConfig?: StorageConfig): ModuleWithProviders {
+
     return {
       ngModule: NgxStorageModule,
-      providers: [{
+      providers: [
+        {
           provide: LocalForageToken,
           useFactory: localforageFactory
         },
-        LocalForageService
+        provideStorage(storageConfig || new StorageConfig())
       ]
     };
   }
