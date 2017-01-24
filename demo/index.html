@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.6.1/css/tachyons.min.css"/>
     <title>ngx-storage</title>
-    <style type="text/css">
-      .container-demo {
-        margin-top: 70px;
+    <style>
+      .content {
+        padding-top: 80px;
       }
     </style>
   </head>
@@ -22,22 +22,18 @@
         data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
     </a>
 
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">ngx-storage</a>
-        </div>
-        <ul class="nav navbar-nav hidden-xs">
-          <li class="active"><a href="javascript:;">Demo</a></li>
-          <li><a href="https://github.com/phillipcurl/ngx-storage#installation">Installation</a></li>
-          <li><a href="https://phillipcurl.github.io/ngx-storage/docs/">Documentation</a></li>
-        </ul>
-      </div>
-    </nav>
+    <header class="bg-black-90 fixed w-100 ph3 pv3 pv4-ns ph4-m ph5-l">
+      <nav class="f6 fw6 ttu tracked">
+        <a class="link dim white dib mr3" href="https://www.npmjs.com/package/ngx-storage" target="_blank" title="ngx-storage">ngx-storage</a>
+        <a class="link dim white dib mr3" href="javascript:;" title="Demo">Demo</a>
+        <a class="link dim white dib mr3" href="https://github.com/phillipcurl/ngx-storage#installation" title="Installation">Installation</a>
+        <a class="link dim white dib" href="https://phillipcurl.github.io/ngx-storage/docs/" title="Documentation">Documentation</a>
+      </nav>
+    </header>
 
-    <div class="container-fluid container-demo">
+    <main class="content">
       <storage-demo-app>Loading demo...</storage-demo-app>
-    </div>
+    </main>
 
     <script src="demo.js" async></script>
 

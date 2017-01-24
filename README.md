@@ -1,3 +1,5 @@
+# WIP: DO NOT USE YET
+
 # ngx-storage
 [![Build Status](https://travis-ci.org/phillipcurl/ngx-storage.svg?branch=master)](https://travis-ci.org/phillipcurl/ngx-storage)
 [![npm version](https://badge.fury.io/js/ngx-storage.svg)](http://badge.fury.io/js/ngx-storage)
