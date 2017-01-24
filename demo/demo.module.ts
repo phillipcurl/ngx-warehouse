@@ -4,7 +4,7 @@ import { NgxStorageModule, StorageConfig, STORAGE_TYPE } from '../src';
 import { DemoComponent } from './demo.component';
 
 const storageConfig: StorageConfig = new StorageConfig({
-  driver: STORAGE_TYPE.INDEXDB,
+  driver: STORAGE_TYPE.INDEXEDDB,
   name: 'Demo',
   version: 1.0,
   storeName: 'keyvaluepairs',

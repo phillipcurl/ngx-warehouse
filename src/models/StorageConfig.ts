@@ -1,7 +1,7 @@
 import { isNil } from './../util';
 
 export enum STORAGE_TYPE {
-  INDEXDB,
+  INDEXEDDB,
   WEBSQL,
   LOCALSTORAGE
   // , INMEMORY
@@ -26,7 +26,7 @@ export class StorageConfig implements IStorageConfig {
 
     if (isNil(config)) {
 
-      this.driver = STORAGE_TYPE.INDEXDB; // Force WebSQL; same as using setDriver()
+      this.driver = STORAGE_TYPE.INDEXEDDB; // Force WebSQL; same as using setDriver()
       this.name = 'ngx-storage';
       this.version = 1.0;
       // size        : 4980736, // Size of database, in bytes. WebSQL-only for now.

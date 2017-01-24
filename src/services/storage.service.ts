@@ -18,7 +18,7 @@ export class Storage {
 
     if (isNil(this.config)) {
       this.config = {
-        driver      : STORAGE_TYPE.INDEXDB,
+        driver      : STORAGE_TYPE.INDEXEDDB,
         name        : 'ngx-storage',
         version     : 1.0,
         storeName   : 'keyvaluepairs',
@@ -34,8 +34,8 @@ export class Storage {
     });
 
     switch (this.config.driver) {
-      case STORAGE_TYPE.INDEXDB:
-        this.localForage.setDriver(this.localForage.INDEXDB);
+      case STORAGE_TYPE.INDEXEDDB:
+        this.localForage.setDriver(this.localForage.INDEXEDDB);
         break;
       case STORAGE_TYPE.WEBSQL:
         this.localForage.setDriver(this.localForage.WEBSQL);
