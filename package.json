@@ -1,6 +1,6 @@
 {
   "name": "ngx-warehouse",
-  "version": "0.4.0",
+  "version": "0.6.0",
   "description": "An offline storage solution for Angular apps",
   "main": "./dist/umd/ngx-warehouse.js",
   "module": "./dist/esm/src/index.js",
@@ -27,7 +27,11 @@
     "url": "git+https://github.com/phillipcurl/ngx-warehouse.git"
   },
   "keywords": [
-    "angular2",
+    "websql", 
+    "localforage", 
+    "indexeddb", 
+    "localstorage", 
+    "angular2", 
     "angular"
   ],
   "author": "Phillip Curl",
