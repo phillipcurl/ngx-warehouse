@@ -1,6 +1,6 @@
 {
   "name": "ngx-warehouse",
-  "version": "0.6.6",
+  "version": "0.6.7",
   "description": "An offline storage solution for Angular apps",
   "main": "./dist/umd/ngx-warehouse.js",
   "module": "./dist/esm/src/index.js",
