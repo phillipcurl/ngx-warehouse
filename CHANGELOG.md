@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+
+
 <a name="0.6.5"></a>
 ## [0.6.5](https://github.com/phillipcurl/ngx-warehouse/compare/v0.6.0...v0.6.5) (2017-01-25)
 
@@ -9,6 +11,11 @@ All notable changes to this project will be documented in this file. See [standa
 
 <a name="0.6.0"></a>
 # [0.6.0](https://github.com/phillipcurl/ngx-warehouse/compare/v0.4.0...v0.6.0) (2017-01-25)
+
+
+
+<a name="0.5.0"></a>
+# [0.5.0](https://github.com/phillipcurl/ngx-warehouse/compare/v0.4.0...v0.5.0) (2017-01-25)
 
 
 
