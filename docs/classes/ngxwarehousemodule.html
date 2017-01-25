@@ -908,7 +908,7 @@ img { max-width: 100%; }
 <nav class="tsd-navigation secondary">
 	<ul>
 		<li class=" tsd-kind-enum">
-			<a href="../enums/storage_type.html" class="tsd-kind-icon">STORAGE_<wbr>TYPE</a>
+			<a href="../enums/driver_type.html" class="tsd-kind-icon">DRIVER_<wbr>TYPE</a>
 		</li>
 		<li class=" tsd-kind-class">
 			<a href="configurationcomponent.html" class="tsd-kind-icon">Configuration<wbr>Component</a>
@@ -926,21 +926,18 @@ img { max-width: 100%; }
 			<a href="ngxwarehousemodule.html" class="tsd-kind-icon">Ngx<wbr>Warehouse<wbr>Module</a>
 			<ul>
 				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
-					<a href="ngxwarehousemodule.html#providestorage" class="tsd-kind-icon">provide<wbr>Storage</a>
+					<a href="ngxwarehousemodule.html#configurewarehouse" class="tsd-kind-icon">configure<wbr>Warehouse</a>
 				</li>
 			</ul>
 		</li>
 		<li class=" tsd-kind-class">
-			<a href="storage.html" class="tsd-kind-icon">Storage</a>
-		</li>
-		<li class=" tsd-kind-class">
-			<a href="storageconfigclass.html" class="tsd-kind-icon">Storage<wbr>Config<wbr>Class</a>
+			<a href="warehouse.html" class="tsd-kind-icon">Warehouse</a>
 		</li>
 		<li class=" tsd-kind-interface">
 			<a href="../interfaces/expirydata.html" class="tsd-kind-icon">Expiry<wbr>Data</a>
 		</li>
 		<li class=" tsd-kind-interface">
-			<a href="../interfaces/storageconfig.html" class="tsd-kind-icon">Storage<wbr>Config</a>
+			<a href="../interfaces/warehouseconfig.html" class="tsd-kind-icon">Warehouse<wbr>Config</a>
 		</li>
 		<li class=" tsd-kind-variable">
 			<a href="../globals.html#cookie_sep" class="tsd-kind-icon">COOKIE_<wbr>SEP</a>
@@ -955,7 +952,7 @@ img { max-width: 100%; }
 			<a href="../globals.html#localforagetoken" class="tsd-kind-icon">Local<wbr>Forage<wbr>Token</a>
 		</li>
 		<li class=" tsd-kind-variable">
-			<a href="../globals.html#storageconfigtoken" class="tsd-kind-icon">Storage<wbr>Config<wbr>Token</a>
+			<a href="../globals.html#warehouseconfigtoken" class="tsd-kind-icon">Warehouse<wbr>Config<wbr>Token</a>
 		</li>
 		<li class=" tsd-kind-variable">
 			<a href="../globals.html#decode" class="tsd-kind-icon">decode</a>
@@ -1012,13 +1009,13 @@ img { max-width: 100%; }
 			<a href="../globals.html#setdatawithexpiry" class="tsd-kind-icon">set<wbr>Data<wbr>With<wbr>Expiry</a>
 		</li>
 		<li class=" tsd-kind-function">
-			<a href="../globals.html#storageconfigfactory" class="tsd-kind-icon">storage<wbr>Config<wbr>Factory</a>
-		</li>
-		<li class=" tsd-kind-function">
 			<a href="../globals.html#tostring" class="tsd-kind-icon">to<wbr>String</a>
 		</li>
+		<li class=" tsd-kind-object-literal">
+			<a href="../globals.html#default_config" class="tsd-kind-icon">DEFAULT_<wbr>CONFIG</a>
+		</li>
 		<li class=" tsd-kind-object-literal tsd-is-not-exported">
-			<a href="../globals.html#storageconfig" class="tsd-kind-icon">storage<wbr>Config</a>
+			<a href="../globals.html#config" class="tsd-kind-icon">config</a>
 		</li>
 	</ul>
 </nav>
@@ -1041,7 +1038,7 @@ img { max-width: 100%; }
 					<section class="tsd-index-section ">
 						<h3>Methods</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="ngxwarehousemodule.html#providestorage" class="tsd-kind-icon">provide<wbr>Storage</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="ngxwarehousemodule.html#configurewarehouse" class="tsd-kind-icon">configure<wbr>Warehouse</a></li>
 						</ul>
 					</section>
 				</div>
@@ -1050,22 +1047,22 @@ img { max-width: 100%; }
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Methods</h2>
 			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
-				<a name="providestorage" class="tsd-anchor"></a>
-				<h3>provide<wbr>Storage</h3>
+				<a name="configurewarehouse" class="tsd-anchor"></a>
+				<h3>configure<wbr>Warehouse</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-					<li class="tsd-signature tsd-kind-icon">provide<wbr>Storage<span class="tsd-signature-symbol">(</span>storageConfig<span class="tsd-signature-symbol">: </span><a href="../interfaces/storageconfig.html" class="tsd-signature-type">StorageConfig</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ModuleWithProviders</span></li>
+					<li class="tsd-signature tsd-kind-icon">configure<wbr>Warehouse<span class="tsd-signature-symbol">(</span>config<span class="tsd-signature-symbol">: </span><a href="../interfaces/warehouseconfig.html" class="tsd-signature-type">WarehouseConfig</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ModuleWithProviders</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/phillipcurl/ngx-warehouse/blob/8c0f8e0/src/ngxWarehouse.module.ts#L44">src/ngxWarehouse.module.ts:44</a></li>
+								<li>Defined in <a href="https://github.com/phillipcurl/ngx-warehouse/blob/d8ac64d/src/ngxWarehouse.module.ts#L27">src/ngxWarehouse.module.ts:27</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
-								<h5>storageConfig: <a href="../interfaces/storageconfig.html" class="tsd-signature-type">StorageConfig</a></h5>
+								<h5>config: <a href="../interfaces/warehouseconfig.html" class="tsd-signature-type">WarehouseConfig</a></h5>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">ModuleWithProviders</span></h4>

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>StorageConfig | ngx-warehouse</title>
+	<title>DRIVER_TYPE | ngx-warehouse</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
@@ -907,8 +907,22 @@ img { max-width: 100%; }
 </header>
 <nav class="tsd-navigation secondary">
 	<ul>
-		<li class=" tsd-kind-enum">
-			<a href="../enums/storage_type.html" class="tsd-kind-icon">STORAGE_<wbr>TYPE</a>
+		<li class="current tsd-kind-enum">
+			<a href="driver_type.html" class="tsd-kind-icon">DRIVER_<wbr>TYPE</a>
+			<ul>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="driver_type.html#default" class="tsd-kind-icon">DEFAULT</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="driver_type.html#indexeddb" class="tsd-kind-icon">INDEXEDDB</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="driver_type.html#localstorage" class="tsd-kind-icon">LOCALSTORAGE</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="driver_type.html#websql" class="tsd-kind-icon">WEBSQL</a>
+				</li>
+			</ul>
 		</li>
 		<li class=" tsd-kind-class">
 			<a href="../classes/configurationcomponent.html" class="tsd-kind-icon">Configuration<wbr>Component</a>
@@ -926,33 +940,13 @@ img { max-width: 100%; }
 			<a href="../classes/ngxwarehousemodule.html" class="tsd-kind-icon">Ngx<wbr>Warehouse<wbr>Module</a>
 		</li>
 		<li class=" tsd-kind-class">
-			<a href="../classes/storage.html" class="tsd-kind-icon">Storage</a>
-		</li>
-		<li class=" tsd-kind-class">
-			<a href="../classes/storageconfigclass.html" class="tsd-kind-icon">Storage<wbr>Config<wbr>Class</a>
+			<a href="../classes/warehouse.html" class="tsd-kind-icon">Warehouse</a>
 		</li>
 		<li class=" tsd-kind-interface">
-			<a href="expirydata.html" class="tsd-kind-icon">Expiry<wbr>Data</a>
+			<a href="../interfaces/expirydata.html" class="tsd-kind-icon">Expiry<wbr>Data</a>
 		</li>
-		<li class="current tsd-kind-interface">
-			<a href="storageconfig.html" class="tsd-kind-icon">Storage<wbr>Config</a>
-			<ul>
-				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="storageconfig.html#description" class="tsd-kind-icon">description</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="storageconfig.html#driver" class="tsd-kind-icon">driver</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="storageconfig.html#name" class="tsd-kind-icon">name</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="storageconfig.html#storename" class="tsd-kind-icon">store<wbr>Name</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="storageconfig.html#version" class="tsd-kind-icon">version</a>
-				</li>
-			</ul>
+		<li class=" tsd-kind-interface">
+			<a href="../interfaces/warehouseconfig.html" class="tsd-kind-icon">Warehouse<wbr>Config</a>
 		</li>
 		<li class=" tsd-kind-variable">
 			<a href="../globals.html#cookie_sep" class="tsd-kind-icon">COOKIE_<wbr>SEP</a>
@@ -967,7 +961,7 @@ img { max-width: 100%; }
 			<a href="../globals.html#localforagetoken" class="tsd-kind-icon">Local<wbr>Forage<wbr>Token</a>
 		</li>
 		<li class=" tsd-kind-variable">
-			<a href="../globals.html#storageconfigtoken" class="tsd-kind-icon">Storage<wbr>Config<wbr>Token</a>
+			<a href="../globals.html#warehouseconfigtoken" class="tsd-kind-icon">Warehouse<wbr>Config<wbr>Token</a>
 		</li>
 		<li class=" tsd-kind-variable">
 			<a href="../globals.html#decode" class="tsd-kind-icon">decode</a>
@@ -1024,13 +1018,13 @@ img { max-width: 100%; }
 			<a href="../globals.html#setdatawithexpiry" class="tsd-kind-icon">set<wbr>Data<wbr>With<wbr>Expiry</a>
 		</li>
 		<li class=" tsd-kind-function">
-			<a href="../globals.html#storageconfigfactory" class="tsd-kind-icon">storage<wbr>Config<wbr>Factory</a>
-		</li>
-		<li class=" tsd-kind-function">
 			<a href="../globals.html#tostring" class="tsd-kind-icon">to<wbr>String</a>
 		</li>
+		<li class=" tsd-kind-object-literal">
+			<a href="../globals.html#default_config" class="tsd-kind-icon">DEFAULT_<wbr>CONFIG</a>
+		</li>
 		<li class=" tsd-kind-object-literal tsd-is-not-exported">
-			<a href="../globals.html#storageconfig" class="tsd-kind-icon">storage<wbr>Config</a>
+			<a href="../globals.html#config" class="tsd-kind-icon">config</a>
 		</li>
 	</ul>
 </nav>
@@ -1038,86 +1032,61 @@ img { max-width: 100%; }
 	<div class="content-wrap">
 		<div class="tsd-panel tsd-typography">
 		</div>
-		<section class="tsd-panel tsd-hierarchy">
-			<h3>Hierarchy</h3>
-			<ul class="tsd-hierarchy">
-				<li>
-					<span class="target">StorageConfig</span>
-				</li>
-			</ul>
-		</section>
-		<section class="tsd-panel">
-			<h3>Implemented by</h3>
-			<ul class="tsd-hierarchy">
-				<li><a href="../classes/storageconfigclass.html" class="tsd-signature-type">StorageConfigClass</a></li>
-			</ul>
-		</section>
 		<section class="tsd-panel-group tsd-index-group">
 			<h2>Index</h2>
 			<section class="tsd-panel tsd-index-panel">
 				<div class="tsd-index-content">
 					<section class="tsd-index-section ">
-						<h3>Properties</h3>
+						<h3>Enumeration members</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="storageconfig.html#description" class="tsd-kind-icon">description</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="storageconfig.html#driver" class="tsd-kind-icon">driver</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="storageconfig.html#name" class="tsd-kind-icon">name</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="storageconfig.html#storename" class="tsd-kind-icon">store<wbr>Name</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="storageconfig.html#version" class="tsd-kind-icon">version</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="driver_type.html#default" class="tsd-kind-icon">DEFAULT</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="driver_type.html#indexeddb" class="tsd-kind-icon">INDEXEDDB</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="driver_type.html#localstorage" class="tsd-kind-icon">LOCALSTORAGE</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="driver_type.html#websql" class="tsd-kind-icon">WEBSQL</a></li>
 						</ul>
 					</section>
 				</div>
 			</section>
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
-			<h2>Properties</h2>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="description" class="tsd-anchor"></a>
-				<h3>description</h3>
-				<div class="tsd-signature tsd-kind-icon">description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+			<h2>Enumeration members</h2>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="default" class="tsd-anchor"></a>
+				<h3>DEFAULT</h3>
+				<div class="tsd-signature tsd-kind-icon">DEFAULT<span class="tsd-signature-symbol">:</span> </div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/phillipcurl/ngx-warehouse/blob/8c0f8e0/src/models/StorageConfig.ts#L16">src/models/StorageConfig.ts:16</a></li>
+						<li>Defined in <a href="https://github.com/phillipcurl/ngx-warehouse/blob/d8ac64d/src/models/WarehouseConfig.ts#L4">src/models/WarehouseConfig.ts:4</a></li>
 					</ul>
 				</aside>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="driver" class="tsd-anchor"></a>
-				<h3>driver</h3>
-				<div class="tsd-signature tsd-kind-icon">driver<span class="tsd-signature-symbol">:</span> <a href="../enums/storage_type.html" class="tsd-signature-type">STORAGE_TYPE</a></div>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="indexeddb" class="tsd-anchor"></a>
+				<h3>INDEXEDDB</h3>
+				<div class="tsd-signature tsd-kind-icon">INDEXEDDB<span class="tsd-signature-symbol">:</span> </div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/phillipcurl/ngx-warehouse/blob/8c0f8e0/src/models/StorageConfig.ts#L12">src/models/StorageConfig.ts:12</a></li>
+						<li>Defined in <a href="https://github.com/phillipcurl/ngx-warehouse/blob/d8ac64d/src/models/WarehouseConfig.ts#L5">src/models/WarehouseConfig.ts:5</a></li>
 					</ul>
 				</aside>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="name" class="tsd-anchor"></a>
-				<h3>name</h3>
-				<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="localstorage" class="tsd-anchor"></a>
+				<h3>LOCALSTORAGE</h3>
+				<div class="tsd-signature tsd-kind-icon">LOCALSTORAGE<span class="tsd-signature-symbol">:</span> </div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/phillipcurl/ngx-warehouse/blob/8c0f8e0/src/models/StorageConfig.ts#L13">src/models/StorageConfig.ts:13</a></li>
+						<li>Defined in <a href="https://github.com/phillipcurl/ngx-warehouse/blob/d8ac64d/src/models/WarehouseConfig.ts#L7">src/models/WarehouseConfig.ts:7</a></li>
 					</ul>
 				</aside>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="storename" class="tsd-anchor"></a>
-				<h3>store<wbr>Name</h3>
-				<div class="tsd-signature tsd-kind-icon">store<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="websql" class="tsd-anchor"></a>
+				<h3>WEBSQL</h3>
+				<div class="tsd-signature tsd-kind-icon">WEBSQL<span class="tsd-signature-symbol">:</span> </div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/phillipcurl/ngx-warehouse/blob/8c0f8e0/src/models/StorageConfig.ts#L15">src/models/StorageConfig.ts:15</a></li>
-					</ul>
-				</aside>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="version" class="tsd-anchor"></a>
-				<h3>version</h3>
-				<div class="tsd-signature tsd-kind-icon">version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/phillipcurl/ngx-warehouse/blob/8c0f8e0/src/models/StorageConfig.ts#L14">src/models/StorageConfig.ts:14</a></li>
+						<li>Defined in <a href="https://github.com/phillipcurl/ngx-warehouse/blob/d8ac64d/src/models/WarehouseConfig.ts#L6">src/models/WarehouseConfig.ts:6</a></li>
 					</ul>
 				</aside>
 			</section>

@@ -908,10 +908,21 @@ img { max-width: 100%; }
 <nav class="tsd-navigation secondary">
 	<ul>
 		<li class=" tsd-kind-enum">
-			<a href="../enums/storage_type.html" class="tsd-kind-icon">STORAGE_<wbr>TYPE</a>
+			<a href="../enums/driver_type.html" class="tsd-kind-icon">DRIVER_<wbr>TYPE</a>
 		</li>
 		<li class="current tsd-kind-class">
 			<a href="configurationcomponent.html" class="tsd-kind-icon">Configuration<wbr>Component</a>
+			<ul>
+				<li class=" tsd-kind-property tsd-parent-kind-class">
+					<a href="configurationcomponent.html#configstring" class="tsd-kind-icon">config<wbr>String</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-class">
+					<a href="configurationcomponent.html#importstring" class="tsd-kind-icon">import<wbr>String</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-class">
+					<a href="configurationcomponent.html#modulestring" class="tsd-kind-icon">module<wbr>String</a>
+				</li>
+			</ul>
 		</li>
 		<li class=" tsd-kind-class">
 			<a href="democomponent.html" class="tsd-kind-icon">Demo<wbr>Component</a>
@@ -926,16 +937,13 @@ img { max-width: 100%; }
 			<a href="ngxwarehousemodule.html" class="tsd-kind-icon">Ngx<wbr>Warehouse<wbr>Module</a>
 		</li>
 		<li class=" tsd-kind-class">
-			<a href="storage.html" class="tsd-kind-icon">Storage</a>
-		</li>
-		<li class=" tsd-kind-class">
-			<a href="storageconfigclass.html" class="tsd-kind-icon">Storage<wbr>Config<wbr>Class</a>
+			<a href="warehouse.html" class="tsd-kind-icon">Warehouse</a>
 		</li>
 		<li class=" tsd-kind-interface">
 			<a href="../interfaces/expirydata.html" class="tsd-kind-icon">Expiry<wbr>Data</a>
 		</li>
 		<li class=" tsd-kind-interface">
-			<a href="../interfaces/storageconfig.html" class="tsd-kind-icon">Storage<wbr>Config</a>
+			<a href="../interfaces/warehouseconfig.html" class="tsd-kind-icon">Warehouse<wbr>Config</a>
 		</li>
 		<li class=" tsd-kind-variable">
 			<a href="../globals.html#cookie_sep" class="tsd-kind-icon">COOKIE_<wbr>SEP</a>
@@ -950,7 +958,7 @@ img { max-width: 100%; }
 			<a href="../globals.html#localforagetoken" class="tsd-kind-icon">Local<wbr>Forage<wbr>Token</a>
 		</li>
 		<li class=" tsd-kind-variable">
-			<a href="../globals.html#storageconfigtoken" class="tsd-kind-icon">Storage<wbr>Config<wbr>Token</a>
+			<a href="../globals.html#warehouseconfigtoken" class="tsd-kind-icon">Warehouse<wbr>Config<wbr>Token</a>
 		</li>
 		<li class=" tsd-kind-variable">
 			<a href="../globals.html#decode" class="tsd-kind-icon">decode</a>
@@ -1007,13 +1015,13 @@ img { max-width: 100%; }
 			<a href="../globals.html#setdatawithexpiry" class="tsd-kind-icon">set<wbr>Data<wbr>With<wbr>Expiry</a>
 		</li>
 		<li class=" tsd-kind-function">
-			<a href="../globals.html#storageconfigfactory" class="tsd-kind-icon">storage<wbr>Config<wbr>Factory</a>
-		</li>
-		<li class=" tsd-kind-function">
 			<a href="../globals.html#tostring" class="tsd-kind-icon">to<wbr>String</a>
 		</li>
+		<li class=" tsd-kind-object-literal">
+			<a href="../globals.html#default_config" class="tsd-kind-icon">DEFAULT_<wbr>CONFIG</a>
+		</li>
 		<li class=" tsd-kind-object-literal tsd-is-not-exported">
-			<a href="../globals.html#storageconfig" class="tsd-kind-icon">storage<wbr>Config</a>
+			<a href="../globals.html#config" class="tsd-kind-icon">config</a>
 		</li>
 	</ul>
 </nav>
@@ -1028,6 +1036,54 @@ img { max-width: 100%; }
 					<span class="target">ConfigurationComponent</span>
 				</li>
 			</ul>
+		</section>
+		<section class="tsd-panel-group tsd-index-group">
+			<h2>Index</h2>
+			<section class="tsd-panel tsd-index-panel">
+				<div class="tsd-index-content">
+					<section class="tsd-index-section ">
+						<h3>Properties</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-property tsd-parent-kind-class"><a href="configurationcomponent.html#configstring" class="tsd-kind-icon">config<wbr>String</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-class"><a href="configurationcomponent.html#importstring" class="tsd-kind-icon">import<wbr>String</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-class"><a href="configurationcomponent.html#modulestring" class="tsd-kind-icon">module<wbr>String</a></li>
+						</ul>
+					</section>
+				</div>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Properties</h2>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<a name="configstring" class="tsd-anchor"></a>
+				<h3>config<wbr>String</h3>
+				<div class="tsd-signature tsd-kind-icon">config<wbr>String<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&#x60;const config: WarehouseConfig &#x3D; {driver: DRIVER_TYPE.DEFAULT,name: &#x27;Your App&#x27;,version: 1.0,storeName: &#x27;key_value_pairs&#x27;, // Should be alphanumeric, with underscores.description: &#x27;A description of your app&#x27;};&#x60;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/phillipcurl/ngx-warehouse/blob/d8ac64d/demo/components/configuration.component.ts#L48">demo/components/configuration.component.ts:48</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<a name="importstring" class="tsd-anchor"></a>
+				<h3>import<wbr>String</h3>
+				<div class="tsd-signature tsd-kind-icon">import<wbr>String<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&#x60;import { NgxWarehouseModule, WarehouseConfig, DRIVER_TYPE } from &#x27;ngx-warehouse&#x27;;&#x60;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/phillipcurl/ngx-warehouse/blob/d8ac64d/demo/components/configuration.component.ts#L47">demo/components/configuration.component.ts:47</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<a name="modulestring" class="tsd-anchor"></a>
+				<h3>module<wbr>String</h3>
+				<div class="tsd-signature tsd-kind-icon">module<wbr>String<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&#x60;@NgModule({declarations: [...],imports: [...NgxWarehouseModule.configureWarehouse(config),...],bootstrap: [...]})&#x60;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/phillipcurl/ngx-warehouse/blob/d8ac64d/demo/components/configuration.component.ts#L55">demo/components/configuration.component.ts:55</a></li>
+					</ul>
+				</aside>
+			</section>
 		</section>
 		<footer class="with-border-bottom">
 			<div class="container">
