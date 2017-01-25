@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
         <span class="pa6-l ph4-m pv2 ph3 w-70-l">
             <h2 class="f3 f2-ns dib w-auto highlight-header">getting started</h2>
             <ol class="f5 lh-copy mt0 f4-ns normal">
-              <li>First, install ngx-storage via npm or yarn.</li>
-              <li>Next, import the NgxStorageModule in your AppModule.</li>
-              <li>Finally, add the NgxStorageModule to your AppModule imports.</li>
+              <li>First, install ngx-warehouse via npm or yarn.</li>
+              <li>Next, import the NgxWarehouseModule in your AppModule.</li>
+              <li>Finally, add the NgxWarehouseModule to your AppModule imports.</li>
             </ol>
           </span>
       </article>
@@ -18,14 +18,14 @@ import { Component } from '@angular/core';
         <div class="h6 overflow-y-scroll">
           <code>
             <pre>
-{{npm install --save ngx-storage
+{{npm install --save ngx-warehouse
 or
-yarn add ngx-storage
+yarn add ngx-warehouse
             </pre>
           </code>
           <code>
             <pre>
-import { NgxStorageModule } from 'ngx-storage';
+import { NgxWarehouseModule } from 'ngx-warehouse';
             </pre>
           </code>
           <code>
@@ -34,7 +34,7 @@ import { NgxStorageModule } from 'ngx-storage';
   declarations: [...],
   imports: [
     ...
-    NgxStorageModule,
+    NgxWarehouseModule,
     ...
   ],
   bootstrap: [...]

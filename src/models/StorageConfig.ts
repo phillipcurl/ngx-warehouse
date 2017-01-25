@@ -18,10 +18,10 @@ export interface StorageConfig {
 
 export class StorageConfigClass implements StorageConfig {
   driver: STORAGE_TYPE;
-  name: string = 'ngx-storage';
+  name: string = 'ngx-warehouse';
   version: number = 1.0;
   storeName: string = 'ngx_storage_keyval_pairs'; // Should be alphanumeric, with underscores.
-  description: string = 'The offline DB for ngx-storage';
+  description: string = 'The offline DB for ngx-warehouse';
 
   constructor(config?: StorageConfig) {
 

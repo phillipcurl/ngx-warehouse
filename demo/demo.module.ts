@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgxStorageModule, StorageConfig, STORAGE_TYPE } from '../src';
+import { NgxWarehouseModule, StorageConfig, STORAGE_TYPE } from '../src';
 import { DEMO_COMPONENTS } from './components';
 import { DemoComponent } from './demo.component';
 
@@ -19,7 +19,7 @@ const storageConfig: StorageConfig = {
   ],
   imports: [
     BrowserModule,
-    NgxStorageModule.provideStorage(storageConfig)
+    NgxWarehouseModule.provideStorage(storageConfig)
   ],
   bootstrap: [DemoComponent]
 })

@@ -17,10 +17,10 @@ export function storageConfigFactory(storageConfig?: StorageConfig): any {
     console.log('config is null. building default config');
     config = {
       driver: STORAGE_TYPE.DEFAULT,
-      name: 'ngx-storage',
+      name: 'ngx-warehouse',
       version: 1.0,
       storeName: 'ngx_storage_keyval_pairs', // Should be alphanumeric, with underscores.
-      description: 'The offline DB for ngx-storage'
+      description: 'The offline DB for ngx-warehouse'
     };
   } else {
     config = storageConfig;
@@ -39,11 +39,11 @@ export function storageConfigFactory(storageConfig?: StorageConfig): any {
     Storage
   ]
 })
-export class NgxStorageModule {
+export class NgxWarehouseModule {
 
   static provideStorage(storageConfig: StorageConfig): ModuleWithProviders {
     return {
-      ngModule: NgxStorageModule,
+      ngModule: NgxWarehouseModule,
       providers: [
         storageConfigFactory(storageConfig)
       ]

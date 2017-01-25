@@ -1,15 +1,15 @@
 # WIP: DO NOT USE YET
 
-# ngx-storage
-[![Build Status](https://travis-ci.org/phillipcurl/ngx-storage.svg?branch=master)](https://travis-ci.org/phillipcurl/ngx-storage)
-[![npm version](https://badge.fury.io/js/ngx-storage.svg)](http://badge.fury.io/js/ngx-storage)
-[![devDependency Status](https://david-dm.org/phillipcurl/ngx-storage/dev-status.svg)](https://david-dm.org/phillipcurl/ngx-storage?type=dev)
-[![GitHub issues](https://img.shields.io/github/issues/phillipcurl/ngx-storage.svg)](https://github.com/phillipcurl/ngx-storage/issues)
-[![GitHub stars](https://img.shields.io/github/stars/phillipcurl/ngx-storage.svg)](https://github.com/phillipcurl/ngx-storage/stargazers)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/phillipcurl/ngx-storage/master/LICENSE)
+# ngx-warehouse
+[![Build Status](https://travis-ci.org/phillipcurl/ngx-warehouse.svg?branch=master)](https://travis-ci.org/phillipcurl/ngx-warehouse)
+[![npm version](https://badge.fury.io/js/ngx-warehouse.svg)](http://badge.fury.io/js/ngx-warehouse)
+[![devDependency Status](https://david-dm.org/phillipcurl/ngx-warehouse/dev-status.svg)](https://david-dm.org/phillipcurl/ngx-warehouse?type=dev)
+[![GitHub issues](https://img.shields.io/github/issues/phillipcurl/ngx-warehouse.svg)](https://github.com/phillipcurl/ngx-warehouse/issues)
+[![GitHub stars](https://img.shields.io/github/stars/phillipcurl/ngx-warehouse.svg)](https://github.com/phillipcurl/ngx-warehouse/stargazers)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/phillipcurl/ngx-warehouse/master/LICENSE)
 
 ## Demo
-https://phillipcurl.github.io/ngx-storage/demo/
+https://phillipcurl.github.io/ngx-warehouse/demo/
 
 ## Table of contents
 
@@ -27,18 +27,18 @@ An offline storage solution for Angular apps
 
 Install through npm:
 ```
-npm install --save ngx-storage
+npm install --save ngx-warehouse
 ```
 
 Then include in your apps module:
 
 ```typescript
 import { Component, NgModule } from '@angular/core';
-import { NgxStorageModule } from 'ngx-storage';
+import { NgxWarehouseModule } from 'ngx-warehouse';
 
 @NgModule({
   imports: [
-    NgxStorageModule.forRoot()
+    NgxWarehouseModule.forRoot()
   ]
 })
 export class MyModule {}
@@ -54,19 +54,19 @@ import { Component } from '@angular/core';
 export class MyComponent {}
 ```
 
-You may also find it useful to view the [demo source](https://github.com/phillipcurl/ngx-storage/blob/master/demo/demo.component.ts).
+You may also find it useful to view the [demo source](https://github.com/phillipcurl/ngx-warehouse/blob/master/demo/demo.component.ts).
 
 ### Usage without a module bundler
 ```
-<script src="node_modules/dist/umd/ngx-storage/ngx-storage.js"></script>
+<script src="node_modules/dist/umd/ngx-warehouse/ngx-warehouse.js"></script>
 <script>
-    // everything is exported ngxStorage namespace
+    // everything is exported ngxWarehouse namespace
 </script>
 ```
 
 ## Documentation
 All documentation is auto-generated from the source via typedoc and can be viewed here:
-https://phillipcurl.github.io/ngx-storage/docs/
+https://phillipcurl.github.io/ngx-warehouse/docs/
 
 ## Development
 
