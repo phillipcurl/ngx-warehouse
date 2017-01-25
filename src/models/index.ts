@@ -1,1 +1,1 @@
-export { STORAGE_TYPE, StorageConfig, StorageConfigClass } from './StorageConfig';
+export { DRIVER_TYPE, WarehouseConfig } from './WarehouseConfig';

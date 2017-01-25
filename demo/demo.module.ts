@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgxWarehouseModule, StorageConfig, STORAGE_TYPE } from '../src';
+import { NgxWarehouseModule, WarehouseConfig, DRIVER_TYPE } from '../src';
 import { DEMO_COMPONENTS } from './components';
 import { DemoComponent } from './demo.component';
 
-const storageConfig: StorageConfig = {
-  driver: STORAGE_TYPE.DEFAULT,
+const config: WarehouseConfig = {
+  driver: DRIVER_TYPE.DEFAULT,
   name: 'Demo',
   version: 1.0,
   storeName: 'keyvaluepairs',
@@ -19,7 +19,7 @@ const storageConfig: StorageConfig = {
   ],
   imports: [
     BrowserModule,
-    NgxWarehouseModule.provideStorage(storageConfig)
+    NgxWarehouseModule.configureWarehouse(config)
   ],
   bootstrap: [DemoComponent]
 })
