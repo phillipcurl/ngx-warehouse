@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Storage } from '../src';
+import { Warehouse } from '../src';
 
 @Component({
   selector: 'storage-demo-app',
@@ -9,7 +9,7 @@ export class DemoComponent implements OnInit {
 
   item: any;
 
-  constructor(public storage: Storage) {
+  constructor(public warehouse: Warehouse) {
   }
 
   ngOnInit(): void {
@@ -26,9 +26,11 @@ export class DemoComponent implements OnInit {
         }
       }
     };
-    this.storage.set('test', testObject)
-      .subscribe((item) => {
-        this.item = item;
-      });
+
+    this.warehouse.set('test', testObject);
+
+    this.warehouse.get('test').subscribe(data => {
+      this.item = data;
+    });
   }
 }

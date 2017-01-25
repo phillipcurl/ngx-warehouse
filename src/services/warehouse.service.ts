@@ -2,22 +2,22 @@ import { Injectable, Inject, Optional } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/fromPromise';
 
-import { STORAGE_TYPE, StorageConfig } from './../models';
-import { LocalForageToken, StorageConfigToken } from './../tokens';
+import { DRIVER_TYPE, WarehouseConfig } from './../models';
+import { LocalForageToken, WarehouseConfigToken } from './../tokens';
 
 /**
  * The primary storage service. This is a wrapper around localForage.
  * The endpoints provided by localForage are converted to observables.
  * 
  * @export
- * @class Storage
+ * @class Warehouse
  */
 @Injectable()
-export class Storage {
+export class Warehouse {
 
   constructor(
     @Inject(LocalForageToken) private _localForage: any,
-    @Inject(StorageConfigToken) private _config: StorageConfig
+    @Inject(WarehouseConfigToken) private _config: WarehouseConfig
   ) {
     this._initLocalForageConfig();
     this._initLocalForageDriver();
@@ -31,7 +31,7 @@ export class Storage {
    * limitation in localStorage, and for compatibility reasons localForage cannot
    * store the value undefined.
    *
-   * Storage.get('key').subscribe(
+   * Warehouse.get('key').subscribe(
    *   (item) => {
    *     // do something with item
    *   },
@@ -43,7 +43,7 @@ export class Storage {
    * @param {string} key
    * @returns {Observable < any >}
    * 
-   * @memberOf Storage
+   * @memberOf Warehouse
    */
   public get(key: string): Observable < any > {
     let promise: Promise < any > = this._localForage.getItem(key);
@@ -72,7 +72,7 @@ export class Storage {
    * before being saved (and retrieved). This serialization will incur a size
    * increase when binary data is saved.
    *
-   * Storage.set('key', value).subscribe(
+   * Warehouse.set('key', value).subscribe(
    *   (item) => {
    *     // do something with newly saved item
    *   },
@@ -85,7 +85,7 @@ export class Storage {
    * @param {*} value
    * @returns {Observable<any>}
    * 
-   * @memberOf Storage
+   * @memberOf Warehouse
    */
   public set(key: string, value: any): Observable<any> {
     let promise: Promise < any > = this._localForage.setItem(key, value);
@@ -98,7 +98,7 @@ export class Storage {
    * @param {string} key
    * @returns {Observable < any >}
    * 
-   * @memberOf Storage
+   * @memberOf Warehouse
    */
   public remove(key: string): Observable < any > {
     let promise: Promise < any > = this._localForage.removeItem(key);
@@ -111,7 +111,7 @@ export class Storage {
    * 
    * @returns {(Observable < boolean | Error >)}
    * 
-   * @memberOf Storage
+   * @memberOf Warehouse
    */
   public destroy(): Observable < boolean | Error > {
     let promise: Promise < any > = this._localForage.clear();
@@ -123,7 +123,7 @@ export class Storage {
    * 
    * @returns {Observable < number >}
    * 
-   * @memberOf Storage
+   * @memberOf Warehouse
    */
   public length(): Observable < number > {
     let promise: Promise < any > = this._localForage.length();
@@ -138,7 +138,7 @@ export class Storage {
    * @param {number} index
    * @returns {Observable < string >}
    * 
-   * @memberOf Storage
+   * @memberOf Warehouse
    */
   public key(index: number): Observable < string > {
     let promise: Promise < any > = this._localForage.key(index);
@@ -150,7 +150,7 @@ export class Storage {
    * 
    * @returns {Observable < string[] >}
    * 
-   * @memberOf Storage
+   * @memberOf Warehouse
    */
   public keys(): Observable < string[] > {
     let promise: Promise < any > = this._localForage.keys();
@@ -162,7 +162,7 @@ export class Storage {
    * 
    * @private
    * 
-   * @memberOf Storage
+   * @memberOf Warehouse
    */
   private _initLocalForageConfig(): void {
     this._localForage.config({
@@ -178,20 +178,20 @@ export class Storage {
    * 
    * @private
    * 
-   * @memberOf Storage
+   * @memberOf Warehouse
    */
   private _initLocalForageDriver(): void {
     switch (this._config.driver) {
-      case STORAGE_TYPE.INDEXEDDB:
+      case DRIVER_TYPE.INDEXEDDB:
         this._localForage.setDriver(this._localForage.INDEXEDDB);
         break;
-      case STORAGE_TYPE.WEBSQL:
+      case DRIVER_TYPE.WEBSQL:
         this._localForage.setDriver(this._localForage.WEBSQL);
         break;
-      case STORAGE_TYPE.LOCALSTORAGE:
+      case DRIVER_TYPE.LOCALSTORAGE:
         this._localForage.setDriver(this._localForage.LOCALSTORAGE);
         break;
-      // case STORAGE_TYPE.INMEMORY:
+      // case DRIVER_TYPE.INMEMORY:
       //   this.localForage.defineDriver(memoryStorageDriver)
       //     .then(() => this.localForage.setDriver(memoryStorageDriver._driver));
       //   break;

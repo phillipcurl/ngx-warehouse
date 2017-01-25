@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.6.1/css/tachyons.min.css"/>
+    <link rel="stylesheet" href="https://d2v52k3cl9vedd.cloudfront.net/vhs/0.1.0/vhs.min.css">
+    <title>ngx-warehouse</title>
+    <style>
+      body {
+        font-family: 'Inconsolata', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      }
+      .header {
+        padding-top: 80px;
+      }
+      header {
+        z-index: 2;
+      }
+      .highlight-header {
+        position: relative;
+        z-index: 1;
+      }
+      .highlight-header:after {
+        background-color: #7fd4d3;
+        bottom: 0;
+        content: ' ';
+        display: block;
+        height: 40%;
+        left: 7px;
+        opacity: 1;
+        position: absolute;
+        width: calc(100% + 30px);
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!--<a href="https://github.com/phillipcurl/ngx-warehouse" class="hidden-xs">
+      <img
+        style="position: absolute; top: 0; right: 0; border: 0; z-index: 2000"
+        src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67"
+        alt="Fork me on GitHub"
+        data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+    </a>-->
+
+    <header class="bg-black-90 fixed w-100 ph3 pv3 pv4-ns ph4-m ph5-l">
+      <nav class="f6 fw6 ttu tracked">
+        <a class="link dim white dib mr3" href="https://www.npmjs.com/package/ngx-warehouse" target="_blank" title="ngx-warehouse">ngx-warehouse</a>
+        <a class="link dim white dib mr3" href="javascript:;" title="Demo">Demo</a>
+        <a class="link dim white dib mr3" href="https://github.com/phillipcurl/ngx-warehouse#installation" title="Installation">Installation</a>
+        <a class="link dim white dib" href="https://phillipcurl.github.io/ngx-warehouse/docs/" title="Documentation">Docs</a>
+      </nav>
+    </header>
+
+    <section class="header w-100 ph5-l ph4-m ph3 pv3 pv4-ns">
+      <h1 class="f1 f-subheadline-m f-headline-l mv1 mv3-ns tracked-tight vhs-flicker">ngx-warehouse</h1>
+      <h2 class="f3 f2-ns mv0 lh-cop measure">An offline-first datastore for Angular apps</h2>
+    </section>
+
+    <!-- INSTALLATION -->
+    <section class="bt b--black-10 flex flex-column flex-row-l items-stretch justify-stretch">
+      <article class="bg-white br b--black-10 flex w-50-l items-center content-start justify-center-ns justify-start false">
+        <span class="pa5-l ph4-m pv2 ph3 w-70-l">
+            <h2 class="f3 f2-ns dib w-auto highlight-header">getting started</h2>
+            <ol class="f5 lh-copy mt0 f4-ns normal">
+              <li class="bb b--black-10 pb2">First, install ngx-warehouse via npm or yarn.</li>
+              <li class="bb b--black-10 pv2">Next, import the NgxWarehouseModule in your AppModule.</li>
+              <li class="pt2">Finally, add the NgxWarehouseModule to your AppModule imports.</li>
+            </ol>
+          </span>
+      </article>
+      <article class="bg-light-gray flex w-50-l items-center justify-center pa5-l ph4-m pv2 ph3">
+        <div class="fw4 h6 overflow-y-scroll">
+          <code>
+            <pre>
+npm install --save ngx-warehouse
+
+or
+
+yarn add ngx-warehouse
+            </pre>
+          </code>
+          <code>
+            <pre>
+import { NgxWarehouseModule } from 'ngx-warehouse';
+            </pre>
+          </code>
+          <code>
+            <pre>
+@NgModule({
+  declarations: [...],
+  imports: [
+    ...
+    NgxWarehouseModule,
+    ...
+  ],
+  bootstrap: [...]
+})
+            </pre>
+          </code>
+        </div>
+      </article>
+    </section>
+
+    <!-- CONFIGURATION -->
+    <section class="bt b--black-10 flex flex-column flex-row-l items-stretch justify-stretch">
+      <article class="bg-white br b--black-10 flex w-50-l items-center content-start justify-center-ns justify-start">
+        <span class="pa5-l ph4-m pv2 ph3 w-70-l">
+          <h2 class="f3 f2-ns dib w-auto highlight-header">configuration</h2>
+          <!--<h3 class="f3-ns f4 fw5-ns fw6 mb3 fw5">
+            Take responsive screenshots with full viewport control
+          </h3>-->
+          <p class="f5 lh-copy mt0 f4-ns normal">
+            ngx-warehouse comes with a default configuration to get up and running quickly. However, if you'd
+            like to customize the options, it's easy to do so.
+          </p>
+          <ol class="f5 lh-copy mt0 f4-ns normal">
+            <li class="bb b--black-10 pb2">Along with the NgxWarehouseModule, import WarehouseConfig and DRIVER_TYPE.</li>
+            <li class="bb b--black-10 pv2">
+              Next, define a config object of type WarehouseConfig.
+              <br>
+              The following DRIVER_TYPE's are available:
+              <ul>
+                <li>
+                  <span class="b">DEFAULT</span> - The warehouse will first try to connect to IndexedDB, then 
+                  WebSQL, and finally LocalStorage if the first two fail.
+                </li>
+                <li>
+                  <span class="b">INDEXEDDB</span> - Force the connection to IndexedDB.
+                </li>
+                <li>
+                  <span class="b">WEBSQL</span> - Force the connection to WebSQL.
+                </li>
+                <li>
+                  <span class="b">LOCALSTORAGE</span> - Force the connection to LocalStorage.
+                </li>
+              </ul>
+            </li>
+            <li class="pt2">Lastly, pass the config object to the NgxWarehouseModule using the configureWarehouse() function.</li>
+          </ol>
+        </span>
+      </article>
+      <article class="bg-light-gray flex w-50-l items-center justify-center pa5-l ph4-m pv2 ph3">
+        <div class="h6 overflow-y-scroll">
+          <code>
+            <pre>
+import { NgxWarehouseModule, WarehouseConfig, DRIVER_TYPE } from 'ngx-warehouse';
+            </pre>
+          </code>
+          <code>
+            <pre>
+const config: WarehouseConfig = {
+  driver: DRIVER_TYPE.DEFAULT,
+  name: 'Your App',
+  version: 1.0,
+  storeName: 'key_value_pairs', // Should be alphanumeric, with underscores.
+  description: 'A description of your app'
+};
+            </pre>
+          </code>
+          <code>
+            <pre>
+@NgModule({
+  declarations: [...],
+  imports: [
+    ...
+    NgxWarehouseModule.configureWarehouse(config),
+    ...
+  ],
+  bootstrap: [...]
+})
+            </pre>
+          </code>
+        </div>
+      </article>
+    </section>
+
+  </body>
+</html>
