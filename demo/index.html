@@ -4,34 +4,77 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.6.1/css/tachyons.min.css"/>
+    <link rel="stylesheet" href="https://d2v52k3cl9vedd.cloudfront.net/vhs/0.1.0/vhs.min.css">
     <title>ngx-storage</title>
     <style>
-      .content {
+      body {
+        font-family: 'Inconsolata', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      }
+      .header {
         padding-top: 80px;
+      }
+      header {
+        z-index: 2;
+      }
+      .highlight-header {
+        position: relative;
+        z-index: 1;
+      }
+      .highlight-header:after {
+        background-color: #7fd4d3;
+        bottom: 0;
+        content: ' ';
+        display: block;
+        height: 40%;
+        left: 7px;
+        opacity: 1;
+        position: absolute;
+        width: calc(100% + 30px);
+        z-index: -1;
       }
     </style>
   </head>
   <body>
 
-    <a href="https://github.com/phillipcurl/ngx-storage" class="hidden-xs">
+    <!--<a href="https://github.com/phillipcurl/ngx-storage" class="hidden-xs">
       <img
         style="position: absolute; top: 0; right: 0; border: 0; z-index: 2000"
         src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67"
         alt="Fork me on GitHub"
         data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
-    </a>
+    </a>-->
 
     <header class="bg-black-90 fixed w-100 ph3 pv3 pv4-ns ph4-m ph5-l">
       <nav class="f6 fw6 ttu tracked">
         <a class="link dim white dib mr3" href="https://www.npmjs.com/package/ngx-storage" target="_blank" title="ngx-storage">ngx-storage</a>
         <a class="link dim white dib mr3" href="javascript:;" title="Demo">Demo</a>
         <a class="link dim white dib mr3" href="https://github.com/phillipcurl/ngx-storage#installation" title="Installation">Installation</a>
-        <a class="link dim white dib" href="https://phillipcurl.github.io/ngx-storage/docs/" title="Documentation">Documentation</a>
+        <a class="link dim white dib" href="https://phillipcurl.github.io/ngx-storage/docs/" title="Documentation">Docs</a>
       </nav>
     </header>
 
-    <main class="content">
+    <section class="header w-100 ph5-l ph4-m ph3 pv3 pv4-ns">
+      <h1 class="f1 f-subheadline-m f-headline-l mv1 mv3-ns tracked-tight vhs-flicker">ngx-storage</h1>
+      <h2 class="f3 f2-ns mv0 lh-cop measure">An offline-first datastore for Angular apps</h2>
+      <!--<nav class="">
+        <ul class="list pa0 mv4 lh-copy">
+          <li class="dib mr2"><a class="link underline-hover dark-gray b ttu" href="#strategy" data-scroll="">Strategy</a></li>
+          <li class="dib mr2"><a class="link underline-hover dark-gray b ttu" href="#design" data-scroll="">Design</a></li>
+          <li class="dib mr2"><a class="link underline-hover dark-gray b ttu" href="#technology" data-scroll="">Technology</a></li>
+        </ul>
+      </nav>
+      <address class="fs-normal">
+        <ul class="list pa0 mv4 lh-copy">
+          <li class="dib mr2"><a class="link underline-hover dark-gray" href="mailto:hello@studiocraft.cc"><abbr title="Email"><i class="fa fa-fw fa-envelope" aria-hidden="true"></i></abbr>hello@studiocraft.cc</a></li>
+          <li class="dib mr2"><a class="link underline-hover dark-gray" href="tel:760-265-1232"><abbr title="Phone"><i class="fa fa-fw fa-phone" aria-hidden="true"></i></abbr>(760) 265-1232</a></li>
+          <li class="dib mr2"><a class="link underline-hover dark-gray" href="https://goo.gl/maps/ePAZK239wrC2" target="_blank"><abbr title="Location"><i class="fa fa-fw fa-globe" aria-hidden="true"></i></abbr>New York, NY</a></li>
+        </ul>
+      </address>-->
+    </section>
+
+    <main class="demo-content">
       <storage-demo-app>Loading demo...</storage-demo-app>
     </main>
 

@@ -1,5 +1,56 @@
-<h1>Demo</h1>
-
-<div>
-  {{ item | json }}
+<div class="mw center">
+  <demo-getting-started></demo-getting-started>
+  <demo-configuration></demo-configuration>
+  <section class="bt b--black-10 flex flex-column flex-row-l items-stretch justify-stretch">
+    <article class="bg-white br b--black-10 flex w-50-l items-center content-start justify-center-ns justify-start false">
+      <span class="pa6-l ph4-m pv2 ph3 w-70-l">
+          <h2 class="f2 f1-ns dib w-auto highlight-header">/tracks</h2>
+          <p class="f5 lh-copy mt0 f4-ns normal">
+            Urlbox allows you to change the viewport dimensions to simulate screen sizes of all shapes and sizes.
+            You can also supply a user agent string to screenshot mobile optimised sites and emulate mobile devices.
+          </p>
+        </span>
+    </article>
+    <article class="bg-washed-yellow flex w-50-l items-center justify-center pa5-l ph4-m pv2 ph3">
+      <div class="h6 overflow-y-scroll">
+        <dl class="f5-ns f6 mv2">
+          <dt class="dib gold b">now-sounds.now.sh/api/tracks</dt>
+          <dd class="dib ml0 yellow">Returns the SoundCloud <a href="https://developers.soundcloud.com/docs/api/reference#users" target="_blank">user object</a></dd>
+        </dl>
+        <dl class="f5-ns f6 mv2">
+          <dt class="dib gold b">now-sounds.now.sh/api/trackcomments</dt>
+          <dd class="dib ml0 yellow">Losses</dd>
+        </dl>
+        <dl class="f5-ns f6 mv2">
+          <dt class="dib gold b">now-sounds.now.sh/api/trvoriters</dt>
+          <dd class="dib ml0 yellow">Winning Percentages</dd>
+        </dl>
+      </div>
+    </article>
+  </section>
+  <section class="bt b--black-10 flex flex-column flex-row-l items-stretch justify-stretch">
+    <article class="bg-white br b--black-10 flex w-50-l items-center content-start justify-center-ns justify-start false">
+      <span class="pa6-l ph4-m pv2 ph3 w-70-l">
+          <h2 class="f2 f1-ns dib w-auto highlight-header">/playlists</h2>
+          <p class="f5 lh-copy mt0 f4-ns normal">
+            Urlbox allows you to change the viewport dimensions to simulate screen sizes of all shapes and sizes.
+            You can also supply a user agent string to screenshot mobile optimised sites and emulate mobile devices.
+          </p>
+        </span>
+    </article>
+    <article class="bg-washed-blue flex w-50-l items-center justify-center pa5-l ph4-m pv2 ph3">
+      <div class="h6 overflow-y-scroll">
+        <dl class="f5-ns f6 mv2">
+          <dt class="dib dark-blue b">now-sounds.now.sh/api/playl</dt>
+          <dd class="dib ml0 blue">Returns the SoundCloud <a href="https://developers.soundcloud.com/docs/api/reference#users" target="_blank">user object</a></dd>
+        </dl>
+      </div>
+    </article>
+  </section>
 </div>
+
+<code>
+  <pre>
+{{ item | json }}
+  </pre>
+</code>
