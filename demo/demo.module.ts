@@ -1,21 +1,25 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgxStorageModule, StorageConfig, STORAGE_TYPE } from '../src';
+import { NgxWarehouseModule, StorageConfig, STORAGE_TYPE } from '../src';
+import { DEMO_COMPONENTS } from './components';
 import { DemoComponent } from './demo.component';
 
-const storageConfig: StorageConfig = new StorageConfig({
-  driver: STORAGE_TYPE.INDEXEDDB,
+const storageConfig: StorageConfig = {
+  driver: STORAGE_TYPE.DEFAULT,
   name: 'Demo',
   version: 1.0,
   storeName: 'keyvaluepairs',
   description: 'Demo description'
-});
+};
 
 @NgModule({
-  declarations: [DemoComponent],
+  declarations: [
+    DemoComponent,
+    ...DEMO_COMPONENTS
+  ],
   imports: [
     BrowserModule,
-    NgxStorageModule.forRoot(storageConfig)
+    NgxWarehouseModule.provideStorage(storageConfig)
   ],
   bootstrap: [DemoComponent]
 })

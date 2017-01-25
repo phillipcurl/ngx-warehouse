@@ -1,8 +1,8 @@
 {
-  "name": "ngx-storage",
-  "version": "0.1.0",
+  "name": "ngx-warehouse",
+  "version": "0.2.0",
   "description": "An offline storage solution for Angular apps",
-  "main": "./dist/umd/ngx-storage.js",
+  "main": "./dist/umd/ngx-warehouse.js",
   "module": "./dist/esm/src/index.js",
   "typings": "./dist/esm/src/index.d.ts",
   "scripts": {
@@ -18,14 +18,13 @@
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "typedoc": "typedoc --options typedoc.json src/*.ts",
     "gh-pages": "git checkout gh-pages && git merge master --no-edit && npm run build:demo && npm run typedoc && git add . && git commit -m 'chore: build demo and docs' && git push && git checkout master",
-
     "release": "git add package.json && git commit -m 'chore: bump version number' && standard-version --first-release && git push --follow-tags origin master && npm run build:dist && npm publish",
     "postrelease": "npm run build:clean && npm run gh-pages",
     "commitmsg": "validate-commit-msg"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/phillipcurl/ngx-storage.git"
+    "url": "git+https://github.com/phillipcurl/ngx-warehouse.git"
   },
   "keywords": [
     "angular2",
@@ -34,9 +33,9 @@
   "author": "Phillip Curl",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/phillipcurl/ngx-storage/issues"
+    "url": "https://github.com/phillipcurl/ngx-warehouse/issues"
   },
-  "homepage": "https://github.com/phillipcurl/ngx-storage#readme",
+  "homepage": "https://github.com/phillipcurl/ngx-warehouse#readme",
   "devDependencies": {
     "@angular/common": "^2.1.0",
     "@angular/compiler": "^2.1.0",

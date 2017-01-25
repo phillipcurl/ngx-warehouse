@@ -1,2 +1,1 @@
-export { LocalForageItem } from './localForageItem';
-export { STORAGE_TYPE, IStorageConfig, StorageConfig } from './StorageConfig';
+export { STORAGE_TYPE, StorageConfig, StorageConfigClass } from './StorageConfig';

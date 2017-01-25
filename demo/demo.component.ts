@@ -8,18 +8,27 @@ import { Storage } from '../src';
 export class DemoComponent implements OnInit {
 
   item: any;
-  storage: Storage;
 
-  constructor(storage: Storage) {
-    this.storage = storage;
+  constructor(public storage: Storage) {
   }
 
-  ngOnInit() {
-    this.storage.setItem({
-      key: 'test',
-      value: 'just a test value'
-    }).subscribe((item) => {
-      this.item = item;
-    });
+  ngOnInit(): void {
+    let testObject: any = {
+      anArray: [
+        'first string',
+        'another string',
+        'and even one more'
+      ],
+      aNumber: 2,
+      anObject: {
+        nestedValue: {
+          key: 'Woah this is nested!'
+        }
+      }
+    };
+    this.storage.set('test', testObject)
+      .subscribe((item) => {
+        this.item = item;
+      });
   }
 }

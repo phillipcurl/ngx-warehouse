@@ -4,9 +4,9 @@ module.exports = {
   entry: './src/index.ts',
   output: {
     path: path.join(__dirname, 'dist', 'umd'),
-    filename: './ngx-storage.js',
+    filename: './ngx-warehouse.js',
     libraryTarget: 'umd',
-    library: 'ngxStorage'
+    library: 'ngxWarehouse'
   },
   externals: {
     '@angular/core': {
