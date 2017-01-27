@@ -125,7 +125,7 @@ export class Warehouse {
    * 
    * @memberOf Warehouse
    */
-  public length(): Observable < number > {
+  public count(): Observable < number > {
     let promise: Promise < any > = this._localForage.length();
     return Observable.fromPromise(promise);
   }
