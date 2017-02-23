@@ -6,8 +6,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/phillipcurl/ngx-warehouse.svg)](https://github.com/phillipcurl/ngx-warehouse/stargazers)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/phillipcurl/ngx-warehouse/master/LICENSE)
 
-## Demo
-https://phillipcurl.github.io/ngx-warehouse/demo/
+https://phillipcurl.github.io/ngx-warehouse
 
 ## Table of contents
 
@@ -23,7 +22,7 @@ An offline storage solution for Angular apps built on top of [LocalForage](https
 
 ## Installation
 
-Install through npm:
+Install via npm:
 ```bash
 $ npm install --save ngx-warehouse
 ```
@@ -82,7 +81,7 @@ The following DRIVER_TYPE's are available:
 
 ## Usage
 
-Finally use the warehouse service one of your components:
+Now you're ready to use ngx-warehouse in your app:
 ```typescript
 import { Warehouse } from 'ngx-warehouse';
 
