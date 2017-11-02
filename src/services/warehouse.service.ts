@@ -8,13 +8,12 @@ import { LocalForageToken, WarehouseConfigToken } from './../tokens';
 /**
  * The primary storage service. This is a wrapper around localForage.
  * The endpoints provided by localForage are converted to observables.
- * 
+ *
  * @export
  * @class Warehouse
  */
 @Injectable()
 export class Warehouse {
-
   constructor(
     @Inject(LocalForageToken) private _localForage: any,
     @Inject(WarehouseConfigToken) private _config: WarehouseConfig
@@ -39,14 +38,14 @@ export class Warehouse {
    *     // handle the error
    *   }
    * );
-   * 
+   *
    * @param {string} key
    * @returns {Observable < any >}
-   * 
+   *
    * @memberOf Warehouse
    */
-  public get(key: string): Observable < any > {
-    let promise: Promise < any > = this._localForage.getItem(key);
+  public get(key: string): Observable<any> {
+    let promise: Promise<any> = this._localForage.getItem(key);
     return Observable.fromPromise(promise);
   }
 
@@ -80,53 +79,53 @@ export class Warehouse {
    *     // handle the error
    *   }
    * );
-   * 
+   *
    * @param {string} key
    * @param {*} value
    * @returns {Observable<any>}
-   * 
+   *
    * @memberOf Warehouse
    */
   public set(key: string, value: any): Observable<any> {
-    let promise: Promise < any > = this._localForage.setItem(key, value);
+    let promise: Promise<any> = this._localForage.setItem(key, value);
     return Observable.fromPromise(promise);
   }
 
   /**
    * Removes the value of a key from the offline store.
-   * 
+   *
    * @param {string} key
    * @returns {Observable < any >}
-   * 
+   *
    * @memberOf Warehouse
    */
-  public remove(key: string): Observable < any > {
-    let promise: Promise < any > = this._localForage.removeItem(key);
+  public remove(key: string): Observable<any> {
+    let promise: Promise<any> = this._localForage.removeItem(key);
     return Observable.fromPromise(promise);
   }
 
   /**
    * USE WITH CAUTION:
    * Removes every key from the database, returning it to a blank slate.
-   * 
+   *
    * @returns {(Observable < boolean | Error >)}
-   * 
+   *
    * @memberOf Warehouse
    */
-  public destroy(): Observable < boolean | Error > {
-    let promise: Promise < any > = this._localForage.clear();
+  public destroy(): Observable<boolean | Error> {
+    let promise: Promise<any> = this._localForage.clear();
     return Observable.fromPromise(promise);
   }
 
   /**
    * Gets the number of keys in the offline store (i.e. its “length”).
-   * 
+   *
    * @returns {Observable < number >}
-   * 
+   *
    * @memberOf Warehouse
    */
-  public count(): Observable < number > {
-    let promise: Promise < any > = this._localForage.length();
+  public count(): Observable<number> {
+    let promise: Promise<any> = this._localForage.length();
     return Observable.fromPromise(promise);
   }
 
@@ -134,50 +133,50 @@ export class Warehouse {
    * Get the name of a key based on its ID.
    *
    * This method is inherited from the localStorage API, but is acknowledged to be kinda weird.
-   * 
+   *
    * @param {number} index
    * @returns {Observable < string >}
-   * 
+   *
    * @memberOf Warehouse
    */
-  public key(index: number): Observable < string > {
-    let promise: Promise < any > = this._localForage.key(index);
+  public key(index: number): Observable<string> {
+    let promise: Promise<any> = this._localForage.key(index);
     return Observable.fromPromise(promise);
   }
 
   /**
    * Get the list of all keys in the datastore.
-   * 
+   *
    * @returns {Observable < string[] >}
-   * 
+   *
    * @memberOf Warehouse
    */
-  public keys(): Observable < string[] > {
-    let promise: Promise < any > = this._localForage.keys();
+  public keys(): Observable<string[]> {
+    let promise: Promise<any> = this._localForage.keys();
     return Observable.fromPromise(promise);
   }
 
   /**
-   * 
-   * 
+   *
+   *
    * @private
-   * 
+   *
    * @memberOf Warehouse
    */
   private _initLocalForageConfig(): void {
     this._localForage.config({
-      name        : this._config.name,
-      version     : this._config.version,
-      storeName   : this._config.storeName,
-      description : this._config.description
+      name: this._config.name,
+      version: this._config.version,
+      storeName: this._config.storeName,
+      description: this._config.description
     });
   }
 
   /**
-   * 
-   * 
+   *
+   *
    * @private
-   * 
+   *
    * @memberOf Warehouse
    */
   private _initLocalForageDriver(): void {
@@ -203,5 +202,4 @@ export class Warehouse {
         ]);
     }
   }
-
 }
