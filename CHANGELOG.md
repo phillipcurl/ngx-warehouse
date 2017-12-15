@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.1"></a>
+## [1.0.1](https://github.com/phillipcurl/ngx-warehouse/compare/v1.0.0...v1.0.1) (2017-12-15)
+
+
+### Bug Fixes
+
+* **typedoc:** Fixing an issue with typedoc that was breaking the gh-pages build ([0667b42](https://github.com/phillipcurl/ngx-warehouse/commit/0667b42))
+* **Typedoc:** Fixing an issue in typedoc that was causing the gh-pages build to fail ([61a586b](https://github.com/phillipcurl/ngx-warehouse/commit/61a586b))
+
+
+
 <a name="1.0.0"></a>
 # [1.0.0](https://github.com/phillipcurl/ngx-warehouse/compare/v0.8.0...v1.0.0) (2017-11-02)
 
