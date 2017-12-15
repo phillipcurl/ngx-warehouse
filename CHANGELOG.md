@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/phillipcurl/ngx-warehouse/compare/v0.8.0...v1.0.0) (2017-11-02)
+
+
+### Features
+
+* **DEPS:** Updating dependencies. Specifically Angular to v5 ([5f3e24d](https://github.com/phillipcurl/ngx-warehouse/commit/5f3e24d)), closes [#2](https://github.com/phillipcurl/ngx-warehouse/issues/2)
+
+
+
 <a name="0.8.0"></a>
 # [0.8.0](https://github.com/phillipcurl/ngx-warehouse/compare/v0.7.0...v0.8.0) (2017-02-23)
 
