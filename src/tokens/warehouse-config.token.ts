@@ -1,3 +1,5 @@
-import { OpaqueToken } from '@angular/core';
+import { InjectionToken } from '@angular/core';
 
-export const WarehouseConfigToken: OpaqueToken = new OpaqueToken('WarehouseConfig');
+export const WarehouseConfigToken: InjectionToken<string> = new InjectionToken(
+  'WarehouseConfig'
+);

@@ -2,26 +2,17 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "module": "es2015",
-    "declaration": true,
-    "baseUrl": "",
-    "stripInternal": true,
     "outDir": "./dist",
-    "inlineSources": true,
-    "types": [],
-    "importHelpers": true,
+    "baseUrl": "",
     "emitDecoratorMetadata": false
   },
-  "files": [
-    "src/index.ts"
-  ],
   "exclude": [
-    "test",
-    "demo"
+    "test"
   ],
   "angularCompilerOptions": {
     "strictMetadataEmit": true,
-    "genDir": "./dist/",
-    "skipTemplateCodegen": true,
+    "skipMetadataEmit" : true,
+    "entryModule": "demo/demo.module#DemoModule",
     "trace": true,
     "strictInjectionParameters": true,
     "preserveWhitespaces": true,

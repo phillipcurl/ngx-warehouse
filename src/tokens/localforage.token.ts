@@ -1,3 +1,5 @@
-import { OpaqueToken } from '@angular/core';
+import { InjectionToken } from '@angular/core';
 
-export const LocalForageToken: OpaqueToken = new OpaqueToken('localforage');
+export const LocalForageToken: InjectionToken<string> = new InjectionToken(
+  'localforage'
+);
