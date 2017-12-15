@@ -45,7 +45,7 @@ export class Warehouse {
    * @memberOf Warehouse
    */
   public get(key: string): Observable<any> {
-    let promise: Promise<any> = this._localForage.getItem(key);
+    const promise: Promise<any> = this._localForage.getItem(key);
     return Observable.fromPromise(promise);
   }
 
@@ -87,7 +87,7 @@ export class Warehouse {
    * @memberOf Warehouse
    */
   public set(key: string, value: any): Observable<any> {
-    let promise: Promise<any> = this._localForage.setItem(key, value);
+    const promise: Promise<any> = this._localForage.setItem(key, value);
     return Observable.fromPromise(promise);
   }
 
@@ -100,7 +100,7 @@ export class Warehouse {
    * @memberOf Warehouse
    */
   public remove(key: string): Observable<any> {
-    let promise: Promise<any> = this._localForage.removeItem(key);
+    const promise: Promise<any> = this._localForage.removeItem(key);
     return Observable.fromPromise(promise);
   }
 
@@ -113,7 +113,7 @@ export class Warehouse {
    * @memberOf Warehouse
    */
   public destroy(): Observable<boolean | Error> {
-    let promise: Promise<any> = this._localForage.clear();
+    const promise: Promise<any> = this._localForage.clear();
     return Observable.fromPromise(promise);
   }
 
@@ -125,7 +125,7 @@ export class Warehouse {
    * @memberOf Warehouse
    */
   public count(): Observable<number> {
-    let promise: Promise<any> = this._localForage.length();
+    const promise: Promise<any> = this._localForage.length();
     return Observable.fromPromise(promise);
   }
 
@@ -140,7 +140,7 @@ export class Warehouse {
    * @memberOf Warehouse
    */
   public key(index: number): Observable<string> {
-    let promise: Promise<any> = this._localForage.key(index);
+    const promise: Promise<any> = this._localForage.key(index);
     return Observable.fromPromise(promise);
   }
 
@@ -152,7 +152,7 @@ export class Warehouse {
    * @memberOf Warehouse
    */
   public keys(): Observable<string[]> {
-    let promise: Promise<any> = this._localForage.keys();
+    const promise: Promise<any> = this._localForage.keys();
     return Observable.fromPromise(promise);
   }
 
